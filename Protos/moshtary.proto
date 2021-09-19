@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+option csharp_namespace = "serviceTest.Protos";
+package greet;
+
+
+
+
+service MoshtaryService 
+{
+    rpc GetMoshtaryByccMasir (MoshtaryRequest) returns (MoshtaryList) {}
+}
+message MoshtaryRequest 
+{
+string ccForoshandeh = 1;
+string ccMasirs = 2;
+string CodeMoshtary = 3;
+}
+
+
+message Moshtary {
+    int32 ccMoshtary = 1;
+    string codeMoshtary = 2;
+    int32 ccAfrad = 3;
+    string nameMoshtary = 4;
+    string fNameMoshtary = 5;
+    string LNameMoshtary = 6;
+    string NameTablo =7;
+    int32 CodeNoeVosolAzMoshtary = 8;
+    int32 ModateVosol = 9;
+    int32 CodeNoeShakhsiat = 10;
+    int32 Darajeh = 11;
+    string NameDarajeh = 12;
+    int32 CodeVazeiat = 13;
+    string CodeMely = 14;
+    int32 CodeNoeHaml = 15;
+    string ShenasehMely = 16;
+    int32 MasahatMaghazeh = 17;
+    int32 hasAnbar = 18;
+    int32 ccNoeMoshtary = 19;
+    int32 ccNoeSenf = 20;
+    int32 ccForoshandeh = 21;
+    int32 ccMasir = 22;
+    int32 ControlEtebarForoshandeh = 23;
+    int32 ModateNaghd = 24;
+    string TarikhMoarefiMoshtary = 25;
+    int32 Olaviat =26;
+    string Address = 27;
+    string Mobile = 28;
+    int32 ToorVisit = 29;
+    int32 ccMoshtaryParent = 30;
+    string DateOfMasir = 31;
+    int32 KharejAzMahal = 32;
+}
+
+message MoshtaryList {
+    repeated Moshtary moshtaries = 1;
+}
